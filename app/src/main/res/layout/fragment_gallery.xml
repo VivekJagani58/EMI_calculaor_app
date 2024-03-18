@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    tools:context=".ui.loanCompare.GalleryFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <!-- Principal Amount -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtamount"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="-: Principal(Amount) :-"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingBottom="10dp">
+        <EditText
+            android:id="@+id/edtcmpamount1"
+            android:background="@drawable/edittextborder"
+            android:hint=" Enter Amount"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:backgroundTint="#D8F1EF"
+            android:gravity="center|start"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            tools:ignore="Autofill,HardcodeTextd,HardcodedText"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/edtcmpamount2"
+            android:background="@drawable/edittextborder"
+            android:layout_marginStart="12dp"
+            android:hint=" Enter Amount"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:backgroundTint="#D8F1EF"
+            android:gravity="center|start"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            tools:ignore="Autofill,HardcodedText,TextFields"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtinterestrate"
+            android:text="-: Interest Rate :-"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <EditText
+            android:id="@+id/edtcmpinterest1"
+            android:hint=" Enter Interest Rate"
+            android:background="@drawable/edittextborder"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:backgroundTint="#D8F1EF"
+            android:gravity="center|start"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:textStyle="normal"
+            tools:ignore="Autofill,HardcodedText,TextFields"  />
+        <EditText
+            android:id="@+id/edtcmpinterest2"
+            android:hint=" Enter Interest Rate"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/edittextborder"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:layout_weight="1"
+            android:backgroundTint="#D8F1EF"
+            android:gravity="center|start"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            tools:ignore="Autofill,HardcodedText,TextFields"  />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtcmploanterm"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="-: Loan Term :-"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <EditText
+            android:id="@+id/edtcmploanterm1"
+            android:background="@drawable/edittextborder"
+            android:hint=" Term"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:backgroundTint="#D8F1EF"
+            android:gravity="center|start"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            tools:ignore="Autofill,HardcodedText,TextFields"  />
+        <RadioGroup
+            android:id="@+id/Ctoggle1"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="48dp"
+            android:backgroundTint="#D8F1EF"
+            android:checkedButton="@+id/offer"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints,RtlHardcoded">
+
+            <RadioButton
+                android:id="@+id/Cbtnyear1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:background="@drawable/btnyear_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="Yr"
+                android:textSize="18dp"
+                android:onClick="onRadioButtonClicked"
+                android:textColor="@color/black"
+                tools:ignore="DuplicateIds,HardcodedText,RtlHardcoded,SpUsage" />
+
+            <RadioButton
+                android:id="@+id/Cbtnmonth1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:background="@drawable/btnmonth_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="Mo"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:onClick="onRadioButtonClicked"
+                tools:ignore="HardcodedText,SpUsage" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edtcmploanterm2"
+            android:background="@drawable/edittextborder"
+            android:layout_marginStart="12dp"
+            android:hint=" Term"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:backgroundTint="#D8F1EF"
+            android:gravity="center|start"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:textStyle="normal"
+            tools:ignore="Autofill,HardcodedText,TextFields"  />
+        <RadioGroup
+            android:id="@+id/Ctoggle2"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_marginRight="50dp"
+            android:backgroundTint="#D8F1EF"
+            android:layout_weight="1"
+            android:layout_marginEnd="0dp"
+            android:checkedButton="@+id/offer"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints,RtlHardcoded">
+
+            <RadioButton
+                android:id="@+id/Cbtnyear2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:checked="true"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnyear_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="Yr"
+                android:textSize="18dp"
+                android:onClick="onRadioButtonClicked"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+            <RadioButton
+                android:id="@+id/Cbtnmonth2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:background="@drawable/btnmonth_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:text="Mo"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:onClick="onRadioButtonClicked"
+                tools:ignore="HardcodedText,SpUsage" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <Button
+            android:id="@+id/btncmpcalculate"
+            style="widget.MaterialComponents.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:textAlignment="textStart"
+            android:background="@drawable/edittextborder"
+            android:backgroundTint="@color/teal_700"
+            android:text="Calaculate"
+            android:textSize="13sp"
+            app:icon="@drawable/baseline_calculate_24"
+            tools:ignore="HardcodedText,RtlCompat" />
+        <Button
+            android:id="@+id/btncmpclear"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:textAlignment="center"
+            app:icon="@drawable/baseline_delete_forever_24"
+            android:background="@drawable/edittextborder"
+            android:text="Clear"
+            android:textSize="13sp"
+            tools:ignore="ButtonStyle,HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtcmpemi"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="-: EMI :-"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <TextView
+            android:id="@+id/tvCmpEmi1"
+            android:background="@drawable/edittextborder"
+            android:hint=" EMI"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:backgroundTint="#E6DDD0"
+            android:gravity="center|start"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/tvCmpEmi2"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/edittextborder"
+            android:hint=" EMI"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:backgroundTint="#E6DDD0"
+            android:gravity="center|start"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            tools:ignore="Autofill,Deprecated,HardcodedText,TextFields"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtcmptotalamount"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text=" -: Total Interest Payable :-"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <TextView
+            android:id="@+id/tvCmpTotalInterest1"
+            android:background="@drawable/edittextborder"
+            android:hint=" Your Total Interest"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:backgroundTint="#E6DDD0"
+            android:gravity="center|start"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            tools:ignore="Autofill,Deprecated,HardcodedText,TextFields"  />
+        <TextView
+            android:id="@+id/tvCmpTotalInterest2"
+            android:background="@drawable/edittextborder"
+            android:hint=" Your Total Interest"
+            android:layout_marginStart="12dp"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:backgroundTint="#E6DDD0"
+            android:gravity="center|start"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            tools:ignore="Autofill,Deprecated,HardcodedText,TextFields"  />
+    </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

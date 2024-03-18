@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/emivector"
+            android:title="@string/emi_calculator" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/loancompvector"
+            android:title="@string/compare_Loan" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/historyvector"
+            android:title="@string/history" />
+    </group>
+
+    <item android:title="other">
+        <menu>
+            <item android:id="@+id/about"
+                 android:icon="@drawable/baseline_info_24"
+                android:title="About"/>
+
+
+        </menu>
+
+    </item>
+
+</menu>

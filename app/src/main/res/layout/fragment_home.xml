@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.EMI.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="4dp"
+                        android:text=" Principal(Amount)"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/edt_enterAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder"
+                        android:backgroundTint="#D8F1EF"
+                        android:hint=" Enter Total Amount"
+                        android:inputType="number"
+                        android:paddingHorizontal="4dp"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        tools:ignore="Autofill,HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_rateOfInterest"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="4dp"
+                        android:text=" Rate of Interest %"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/edt_rateOfInterest"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder"
+                        android:backgroundTint="#D8F1EF"
+                        android:hint=" Enter Rate of Interest"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:paddingHorizontal="4dp"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_loanTerm"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="35dp"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="4dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:text=" Loan Term"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="start"
+                        android:paddingHorizontal="0dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:orientation="horizontal">
+
+
+                        <EditText
+                            android:id="@+id/edt_loanTerm"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="35dp"
+                            android:autofillHints="no"
+                            android:background="@drawable/edittextborder"
+                            android:backgroundTint="#D8F1EF"
+                            android:hint=" Term"
+                            android:inputType="number"
+                            android:minEms="1"
+                            android:paddingHorizontal="4dp"
+                            android:textAlignment="textStart"
+                            android:textSize="16sp"
+                            tools:ignore="HardcodedText,NestedWeights" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_YearMonth"
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="35dp"
+                            android:backgroundTint="#D8F1EF"
+                            android:checkedButton="@id/rBtn_year"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rBtn_year"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/btnyear_selector"
+                                android:button="@android:color/transparent"
+                                android:gravity="center"
+                                android:text="@string/year"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <RadioButton
+                                android:id="@+id/rBtn_Month"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/btnmonth_selector"
+                                android:button="@android:color/transparent"
+                                android:gravity="center"
+                                android:text="@string/month"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_feesCharge"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="4dp"
+                        android:text=" Fees and Charges"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/edt_feesCharge"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:autofillHints="no"
+                        android:background="@drawable/edittextborder"
+                        android:backgroundTint="#D8F1EF"
+                        android:hint=" Ex .Fees and Charges "
+                        android:inputType="number"
+                        android:paddingHorizontal="4dp"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="4dp"
+                        android:text=" EMI"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tv_emi"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder"
+                        android:backgroundTint="#E6DDD0"
+                        android:gravity="center_vertical"
+                        android:hint=" Total EMI"
+                        android:paddingHorizontal="4dp"
+                        android:textAlignment="textStart"
+                        android:textSize="16sp"
+                        tools:ignore="Deprecated,HardcodedText,RtlCompat" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <Button
+                        android:id="@+id/btn_calculate"
+                        style="widget.MaterialComponents.Button.Icon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder"
+                        android:backgroundTint="@color/teal_700"
+                        android:paddingHorizontal="10dp"
+                        android:text="Calaculate"
+                        android:textSize="14sp"
+                        app:icon="@drawable/baseline_calculate_24"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/btn_clear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder"
+                        android:paddingHorizontal="10dp"
+                        android:text="Clear"
+                        android:textSize="14sp"
+                        app:icon="@drawable/baseline_delete_forever_24"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="4dp"
+                        android:text=" Loan Amount"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvResultLoanAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder"
+                        android:gravity="center|start"
+                        android:hint=" Loan Amount"
+                        android:paddingHorizontal="4dp"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:autofillHints="no"
+                        android:gravity="center|start"
+                        android:importantForAutofill="no"
+                        android:paddingHorizontal="4dp"
+                        android:text=" Fees and Charges"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvResultFeesAndCharges"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:autofillHints="no"
+                        android:background="@drawable/edittextborder"
+                        android:gravity="center|start"
+                        android:hint=" Fees and Charges"
+                        android:importantForAutofill="no"
+                        android:paddingHorizontal="4dp"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:autofillHints="no"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="4dp"
+                        android:text=" EMI"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvResultEmi"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:autofillHints="no"
+                        android:background="@drawable/edittextborder"
+                        android:gravity="center|start"
+                        android:hint=" EMI"
+                        android:paddingHorizontal="4dp"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="4dp"
+                        android:text=" Interest"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvResultInterest"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder"
+                        android:gravity="center|start"
+                        android:hint=" Interest"
+                        android:paddingHorizontal="4dp"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:paddingHorizontal="4dp"
+                        android:text=" Total Payment"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvResultTotalPayment"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextborder"
+                        android:gravity="center|start"
+                        android:hint=" Total Payment"
+                        android:paddingHorizontal="4dp"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="20dp">
+
+            <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/pcPieChart"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:paddingTop="8dp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_pieChart_details"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_pieChart_details"
+                android:layout_width="116dp"
+                android:layout_height="44dp"
+                android:orientation="vertical"
+                android:gravity="start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/pcPieChart"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.900">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/icon_square"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#10FDE6"
+                    android:text="Interest"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/icon_square"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="#909193"
+                    android:text="Total Payment"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp">
+
+             <Button
+                android:id="@+id/btn_allDetail"
+                style="widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittextborder"
+                android:backgroundTint="@color/teal_700"
+                android:paddingHorizontal="10dp"
+                android:text="View All Detail"
+                android:textSize="16sp"
+                app:icon="@drawable/baseline_info_24"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
