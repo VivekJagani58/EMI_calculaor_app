@@ -27,9 +27,5 @@
         android:name="com.vivek.emi_calculator_app.ui.EMI.emiDetailsFragment"
         android:label="Emi details"
         tools:layout="@layout/fragment_emi_details" />
-    <fragment
-        android:id="@+id/scrollingFragment"
-        android:name="com.vivek.emi_calculator_app.ui.scroll.ScrollingFragment"
-        android:label="fragment_scrolling"
-        tools:layout="@layout/fragment_scrolling" />
+
 </navigation>
